@@ -7,13 +7,17 @@ let counter = document.getElementById("counter")
 
 btn.addEventListener("click", addTask)
 
-function addTask(){
+    function addTask(){
 
-let value = input.value
+    let value = input.value
+    
+    if (value === ""){
+        showErrorMessage("Input cannot be empty");
+        return;
+    }
+    tasks.push(value)
 
-tasks.push(value)
-
-render()
+    render()
 
 }
 
@@ -30,4 +34,11 @@ list.appendChild(li)
 
 counter.textContent = "Tasks: " + tasks.length
 
+}
+
+function showErrorMessage(message){
+    const statusMessage = document.getElementById("errorMessage");
+    const statusPane = document.querySelector(".statusSection");
+    statusMessage.textContent = message;
+    statusPane.classList.remove('hidden');
 }
