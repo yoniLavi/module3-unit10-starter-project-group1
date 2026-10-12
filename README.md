@@ -16,9 +16,9 @@ Open the starter project and run it with Live Server.
 
 Explore:
 
-• adding tasks
-• refreshing the page
-• adding many tasks
+* adding tasks
+* refreshing the page
+* adding many tasks
 
 Discuss with your group:
 
@@ -32,10 +32,10 @@ Look inside script.js.
 
 Try to find problems such as:
 
-• duplicate tasks appearing
-• tasks not clearing input
-• empty tasks allowed
-• list not refreshing correctly
+* duplicate tasks appearing
+* tasks not clearing input
+* empty tasks allowed
+* list not refreshing correctly
 
 Fix the bugs as a team.
 
@@ -47,11 +47,11 @@ Choose at least **two improvements**.
 
 Ideas:
 
-• prevent empty tasks
-• allow Enter key to add tasks
-• add delete buttons
-• improve styling
-• add a task counter
+* prevent empty tasks
+* allow Enter key to add tasks
+* add delete buttons
+* improve styling
+* add a task counter
 
 ---
 
@@ -63,9 +63,9 @@ Redesign the interface.
 
 Ideas:
 
-• dark theme
-• completed tasks
-• better layout
+* dark theme
+* completed tasks
+* better layout
 
 ---
 
@@ -75,10 +75,10 @@ Swap projects with another group.
 
 Review:
 
-• Does it work correctly?
-• Is the code readable?
-• Are variables named clearly?
-• Is the UI easy to use?
+* Does it work correctly?
+* Is the code readable?
+* Are variables named clearly?
+* Is the UI easy to use?
 
 Provide feedback.
 
@@ -88,6 +88,6 @@ Provide feedback.
 
 Discuss:
 
-• writing good commit messages
-• creating issues
-• reviewing pull requests
+* writing good commit messages
+* creating issues
+* reviewing pull requests
