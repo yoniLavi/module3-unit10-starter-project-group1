@@ -23,6 +23,9 @@ btn.addEventListener("click", addTask)
 
 function render(){
 
+    const statusPane = document.querySelector(".statusSection");
+    statusPane.classList.add('hidden');
+    
 for(let i=0;i<tasks.length;i++){
 
 let li = document.createElement("li")
