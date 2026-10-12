@@ -22,7 +22,6 @@ input.addEventListener("keypress", function (event) {
     }
     tasks.push(value)
 
-tasks.push(value);
 input.value = "";
 
 render()
