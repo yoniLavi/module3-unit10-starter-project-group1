@@ -12,7 +12,23 @@ input.addEventListener("keypress", function (event) {
     }
 });
 
-    function addTask(){
+taskList.addEventListener("click", (event)=>{
+    if (event.target.matches("button")){
+        const targetElement =  event.target.dataset.element;
+        let newArray = []
+        console.log("Element " + targetElement + " To be deleted");
+        for (let i = 0; i < tasks.length; i++){
+            if (i === parseInt(targetElement))
+                continue;
+            else
+                newArray.push(tasks[i]);
+        }
+        tasks = newArray;
+        render();
+    }
+});
+
+function addTask(){
 
     let value = input.value
     
@@ -31,21 +47,24 @@ render()
 
 function render(){
 
-list.innerHTML = "";
+    list.innerHTML = "";
 
     const statusPane = document.querySelector(".statusSection");
     statusPane.classList.add('hidden');
     
-for(let i=0;i<tasks.length;i++){
+    for(let i=0;i<tasks.length;i++){
+        let li = document.createElement("li")
+        const button = document.createElement("button");
+        button.textContent = "Delete Me";
+        button.classList.add("delButton");
+        button.setAttribute("data-element", i);
 
-let li = document.createElement("li")
-li.textContent = tasks[i]
+        li.textContent = tasks[i]
+        li.appendChild(button);
+        list.appendChild(li)
+    }
 
-list.appendChild(li)
-
-}
-
-counter.textContent = "Tasks: " + tasks.length
+    counter.textContent = "Tasks: " + tasks.length
 
 }
 
