@@ -19,6 +19,8 @@ render()
 
 function render(){
 
+list.innerHTML = "";
+
 for(let i=0;i<tasks.length;i++){
 
 let li = document.createElement("li")
