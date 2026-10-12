@@ -6,14 +6,27 @@ let list = document.getElementById("taskList")
 let counter = document.getElementById("counter")
 
 btn.addEventListener("click", addTask)
+input.addEventListener("keypress", function (event) {
+    if(event.key === "Enter") {
+        btn.click();
+    }
+});
 
-function addTask(){
+    function addTask(){
 
-let value = input.value
+    let value = input.value
+    
+    if (value === ""){
+        showErrorMessage("Input cannot be empty");
+        return;
+    }
+    tasks.push(value)
 
-tasks.push(value)
+tasks.push(value);
+input.value = "";
 
 render()
+
 
 }
 
@@ -21,6 +34,9 @@ function render(){
 
 list.innerHTML = "";
 
+    const statusPane = document.querySelector(".statusSection");
+    statusPane.classList.add('hidden');
+    
 for(let i=0;i<tasks.length;i++){
 
 let li = document.createElement("li")
@@ -32,4 +48,11 @@ list.appendChild(li)
 
 counter.textContent = "Tasks: " + tasks.length
 
+}
+
+function showErrorMessage(message){
+    const statusMessage = document.getElementById("errorMessage");
+    const statusPane = document.querySelector(".statusSection");
+    statusMessage.textContent = message;
+    statusPane.classList.remove('hidden');
 }
