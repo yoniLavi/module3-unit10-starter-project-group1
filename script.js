@@ -11,9 +11,11 @@ function addTask(){
 
 let value = input.value
 
-tasks.push(value)
+tasks.push(value);
+input.value = "";
 
 render()
+
 
 }
 
