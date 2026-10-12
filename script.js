@@ -32,6 +32,8 @@ render()
 
 function render(){
 
+list.innerHTML = "";
+
     const statusPane = document.querySelector(".statusSection");
     statusPane.classList.add('hidden');
     
