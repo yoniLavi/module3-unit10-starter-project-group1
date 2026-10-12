@@ -6,6 +6,11 @@ let list = document.getElementById("taskList")
 let counter = document.getElementById("counter")
 
 btn.addEventListener("click", addTask)
+input.addEventListener("keypress", function (event) {
+    if(event.key === "Enter") {
+        btn.click();
+    }
+});
 
 function addTask(){
 
